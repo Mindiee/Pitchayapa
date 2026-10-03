@@ -1,0 +1,12 @@
+---
+interface Props {
+  name: string;
+  alt: string;
+  width: number;
+  height: number;
+  eager?: boolean;
+  class?: string;
+}
+const { name, alt, width, height, eager = false, class: className } = Astro.props;
+---
+<img class={className} src={`/images/${name}.webp`} alt={alt} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" />

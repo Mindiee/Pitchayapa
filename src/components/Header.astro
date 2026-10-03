@@ -1,0 +1,18 @@
+<header class="site-header">
+  <a class="wordmark" href="/">Pitchayapa T.</a>
+  <nav aria-label="Main navigation">
+    <a class="header-projects is-current" href="/#projects">Projects</a>
+    <a class="header-resume" href="/#resume">Resume</a>
+  </nav>
+</header>
+<script>
+  const resume = document.querySelector('#resume');
+  if (resume) {
+    const resumeLink = document.querySelector('.header-resume');
+    const projectsLink = document.querySelector('.header-projects');
+    new IntersectionObserver(([entry]) => {
+      resumeLink?.classList.toggle('is-current', entry.isIntersecting);
+      projectsLink?.classList.toggle('is-current', !entry.isIntersecting);
+    }, { threshold: 0.5 }).observe(resume);
+  }
+</script>

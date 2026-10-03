@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.design-reference/
+test-results/
+playwright-report/
+.env*
+!.env.example
+
+.vercel
+.env*

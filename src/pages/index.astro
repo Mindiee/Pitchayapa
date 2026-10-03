@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Artwork from '../components/Artwork.astro';
+import { resumeUrl } from '../data/links';
+---
+<Layout title="Pitchayapa Thiamtamanee — Portfolio" description="Final-year Architecture student transitioning into Product Design and UX/UI.">
+  <main id="main" class="home">
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">Pitchayapa<br />Thiamtamanee</h1>
+      <p><strong>Final-year Architecture student transitioning into Product Design and UX/UI,</strong> focused on designing digital experiences at the intersection of data, technology, and design while considering user needs.</p>
+    </section>
+    <section id="projects" class="home-projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="display-heading">PROJECTS</h2>
+      <div class="project-grid">
+        <a class="project-card" href="/toosuepha/">
+          <Artwork name="toosuepha-laptop" alt="" width={563} height={316} eager />
+          <h3>TooSuePha</h3>
+          <p>RENTAL MARKETPLACE</p>
+        </a>
+        <a class="project-card" href="/wua-lai/">
+          <Artwork name="wua-lai-laptop" alt="" width={563} height={314} eager />
+          <h3>The Echoes of Wua-lai</h3>
+          <p>INTERACTIVE SOUNDSCAPE &amp; DATA SONIFICATION ARCHIVE</p>
+        </a>
+      </div>
+    </section>
+    <section id="resume" class="resume" aria-labelledby="resume-title">
+      <h2 id="resume-title" class="display-heading">Pitchayapa Thiamtamanee<br />RESUME</h2>
+      <a class="button resume-download" href={resumeUrl} target="_blank" rel="noopener noreferrer">DOWNLOAD <span aria-hidden="true">↓</span></a>
+    </section>
+  </main>
+</Layout>

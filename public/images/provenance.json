@@ -1,0 +1,211 @@
+[
+  {
+    "file": "toosuepha-laptop.webp",
+    "source": "Closet (2).zip/6.svg",
+    "crop": {
+      "x": 50,
+      "y": 724,
+      "width": 563,
+      "height": 316
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-lai-laptop.webp",
+    "source": "Closet (2).zip/6.svg",
+    "crop": {
+      "x": 647,
+      "y": 724,
+      "width": 563,
+      "height": 314
+    },
+    "scale": 2
+  },
+  {
+    "file": "toosuepha-logo.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 230,
+      "y": 463,
+      "width": 105,
+      "height": 105
+    },
+    "scale": 2
+  },
+  {
+    "file": "lender-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 178,
+      "y": 1759,
+      "width": 70,
+      "height": 70
+    },
+    "scale": 2
+  },
+  {
+    "file": "renter-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 1032,
+      "y": 1759,
+      "width": 70,
+      "height": 70
+    },
+    "scale": 2
+  },
+  {
+    "file": "platform-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 417,
+      "y": 1515,
+      "width": 61,
+      "height": 61
+    },
+    "scale": 2
+  },
+  {
+    "file": "find-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 137,
+      "y": 2858,
+      "width": 50,
+      "height": 49
+    },
+    "scale": 2
+  },
+  {
+    "file": "fit-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 332,
+      "y": 2858,
+      "width": 50,
+      "height": 49
+    },
+    "scale": 2
+  },
+  {
+    "file": "try-on-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 528,
+      "y": 2858,
+      "width": 50,
+      "height": 49
+    },
+    "scale": 2
+  },
+  {
+    "file": "rent-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 723,
+      "y": 2858,
+      "width": 50,
+      "height": 49
+    },
+    "scale": 2
+  },
+  {
+    "file": "receive-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 918,
+      "y": 2858,
+      "width": 50,
+      "height": 49
+    },
+    "scale": 2
+  },
+  {
+    "file": "return-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 1113,
+      "y": 2858,
+      "width": 50,
+      "height": 49
+    },
+    "scale": 2
+  },
+  {
+    "file": "virtual-try-on.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 50,
+      "y": 3110,
+      "width": 783,
+      "height": 565
+    },
+    "scale": 2
+  },
+  {
+    "file": "rental-flow.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 50,
+      "y": 3874,
+      "width": 548,
+      "height": 396
+    },
+    "scale": 2
+  },
+  {
+    "file": "rental-notification.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 50,
+      "y": 4270,
+      "width": 548,
+      "height": 396
+    },
+    "scale": 2
+  },
+  {
+    "file": "lender-overview.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 704,
+      "y": 3874,
+      "width": 548,
+      "height": 396
+    },
+    "scale": 2
+  },
+  {
+    "file": "lender-returns.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 704,
+      "y": 4270,
+      "width": 548,
+      "height": 396
+    },
+    "scale": 2
+  },
+  {
+    "file": "journey.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 373,
+      "y": 4908,
+      "width": 599,
+      "height": 728
+    },
+    "scale": 2
+  },
+  {
+    "file": "prototype.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 50,
+      "y": 5878,
+      "width": 1071,
+      "height": 1594
+    },
+    "scale": 2
+  }
+]
