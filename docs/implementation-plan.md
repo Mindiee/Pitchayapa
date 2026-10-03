@@ -6,7 +6,7 @@ The user supplied Closet (2).zip on 2026-10-04 as the design source after Figma 
 
 Build the requested portfolio in Inter. Preserve the desktop composition, typography hierarchy, whitespace, imagery, and content; reflow on tablet and mobile without adding content. Home links to separate project pages. Resume and Visit Website use the exact user URLs. Each available project section has a sticky anchor link with scroll tracking.
 
-Wua Lai contains only an overview; its other four navigation labels have no section content in the export. Clarification requested; omit unsupported sections and links if no further material is supplied. Do not manufacture case-study prose.
+Wua Lai contains only an overview; its other four navigation labels have no section content in the export. The user clarified: keep the links and omit the content for now. Preserve the blank area with empty section anchors; do not manufacture case-study prose.
 
 ## Architecture
 

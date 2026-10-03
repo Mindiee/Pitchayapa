@@ -24,13 +24,13 @@ h1, h2, h3, p { margin: 0; }
 .site-header nav a { font-size: 16px; color: var(--muted); padding-block: 6px; border-bottom: 2px solid transparent; }
 .site-header nav a.is-current { color: #1b1e1c; font-weight: 600; border-color: currentColor; }
 .home, .case-study { max-width: 1440px; margin-inline: auto; }
-.intro { padding: 102px var(--page-gutter) 67px; }
+.intro { padding: 102px var(--page-gutter) 62px; }
 .intro h1 { font-size: 64px; line-height: 1.17; font-weight: 720; letter-spacing: -2.6px; }
-.intro p { margin-top: 40px; color: #4b4e4f; font-size: 24px; line-height: 1.35; letter-spacing: .02em; max-width: 1160px; }
+.intro p { margin-top: 40px; color: #4b4e4f; font-size: 23px; line-height: 32px; letter-spacing: 0; max-width: 1180px; }
 .intro p strong { font-weight: 560; }
 .display-heading { font-size: 36px; font-weight: 750; line-height: 1.4; letter-spacing: -1.6px; text-align: center; text-shadow: .7px .7px 0 #1b1e1c; }
 .home-projects { padding: 102px var(--page-gutter) 151px; }
-.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; margin-top: 92px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; margin-top: 92px; max-width: 1160px; }
 .project-card { text-align: center; }
 .project-card img { width: 100%; aspect-ratio: 563 / 316; object-fit: contain; }
 .project-card h3 { margin-top: 30px; font-size: 25px; font-weight: 550; letter-spacing: -1.1px; }

@@ -1,0 +1,13 @@
+---
+interface Props { sections: { id: string; label: string }[]; }
+const { sections } = Astro.props;
+---
+<nav class="section-nav" aria-label="Project sections">
+  <div class="section-nav-inner">
+    {sections.map(({ id, label }, index) => <a href={`#${id}`} aria-current={index === 0 ? 'location' : undefined}>{label}</a>)}
+  </div>
+</nav>
+<script>
+  import { setupSectionNavigation } from '../scripts/section-navigation';
+  setupSectionNavigation();
+</script>

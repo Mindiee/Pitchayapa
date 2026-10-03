@@ -66,6 +66,94 @@
     "scale": 2
   },
   {
+    "file": "renter-problem-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 208,
+      "y": 2186,
+      "width": 24,
+      "height": 24
+    },
+    "scale": 2
+  },
+  {
+    "file": "lender-problem-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 698,
+      "y": 2186,
+      "width": 24,
+      "height": 24
+    },
+    "scale": 2
+  },
+  {
+    "file": "fit-uncertainty-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 208,
+      "y": 2242,
+      "width": 22,
+      "height": 20
+    },
+    "scale": 2
+  },
+  {
+    "file": "availability-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 208,
+      "y": 2276,
+      "width": 22,
+      "height": 22
+    },
+    "scale": 2
+  },
+  {
+    "file": "pickup-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 208,
+      "y": 2310,
+      "width": 22,
+      "height": 22
+    },
+    "scale": 2
+  },
+  {
+    "file": "damage-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 698,
+      "y": 2240,
+      "width": 22,
+      "height": 22
+    },
+    "scale": 2
+  },
+  {
+    "file": "inspection-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 698,
+      "y": 2276,
+      "width": 22,
+      "height": 22
+    },
+    "scale": 2
+  },
+  {
+    "file": "logistics-icon.webp",
+    "source": "Closet (2).zip/7.svg",
+    "crop": {
+      "x": 698,
+      "y": 2312,
+      "width": 22,
+      "height": 22
+    },
+    "scale": 2
+  },
+  {
     "file": "find-icon.webp",
     "source": "Closet (2).zip/7.svg",
     "crop": {
