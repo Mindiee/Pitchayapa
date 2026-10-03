@@ -1,5 +1,5 @@
 import sharp from 'sharp';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 // Coordinates refer to the user-supplied 1280px SVG exports. Only artwork is
 // extracted; page headings, body copy, buttons and navigation remain HTML.
@@ -33,12 +33,24 @@ const crops = [
   ['prototype', '7', 50, 5878, 1071, 1594],
 ];
 await mkdir('public/images', { recursive: true });
+const renderedSources = new Map();
 for (const [name, source, x, y, width, height] of crops) {
-  await sharp(`.design-reference/${source}.svg`, { density: 144 })
+  if (!renderedSources.has(source)) {
+    renderedSources.set(source, await sharp(`.design-reference/${source}.svg`, { density: 144 }).png().toBuffer());
+  }
+  await sharp(renderedSources.get(source))
     .extract({ left: x * 2, top: y * 2, width: width * 2, height: height * 2 })
     .webp({ quality: 95 })
     .toFile(`public/images/${name}.webp`);
 }
+// The original image is underneath separate callout lines in the SVG. Read
+// that embedded image directly so the responsive HTML callouts aren't doubled.
+const svg = await readFile('.design-reference/7.svg', 'utf8');
+const imageTag = svg.match(/<image\b[^>]*\bid="image18_211_6324"[^>]*>/)?.[0];
+const payload = imageTag?.match(/(?:xlink:)?href="data:image\/[^;]+;base64,([^"]+)"/)?.[1];
+if (!payload) throw new Error('The supplied Virtual Try-On image could not be found.');
+await sharp(Buffer.from(payload, 'base64')).resize(1566, 1130).webp({ quality: 95 }).toFile('public/images/virtual-try-on.webp');
 await writeFile('public/images/provenance.json', JSON.stringify(crops.map(([name, source, x, y, width, height]) => ({
   file: `${name}.webp`, source: `Closet (2).zip/${source}.svg`, crop: { x, y, width, height }, scale: 2,
+  ...(name === 'virtual-try-on' ? { sourceImage: 'image18_211_6324', note: 'Original embedded artwork; callout lines are responsive HTML/CSS.' } : {}),
 })), null, 2));

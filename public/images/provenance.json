@@ -228,7 +228,9 @@
       "width": 783,
       "height": 565
     },
-    "scale": 2
+    "scale": 2,
+    "sourceImage": "image18_211_6324",
+    "note": "Original embedded artwork; callout lines are responsive HTML/CSS."
   },
   {
     "file": "rental-flow.webp",

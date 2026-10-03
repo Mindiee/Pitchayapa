@@ -1,6 +1,6 @@
 .project-title { font-size: 48px; line-height: 1.4; font-weight: 750; letter-spacing: -2.1px; text-align: center; text-shadow: 1px 1px 0 #1b1e1c; }
 .toosuepha .overall { padding-top: 94px; padding-bottom: 130px; }
-.toosuepha-hero { display: grid; grid-template-columns: 42% 58%; align-items: center; margin-top: 84px; padding-right: 50px; }
+.toosuepha-hero { display: grid; grid-template-columns: 43.05% 56.95%; align-items: center; margin-top: 84px; padding-right: 47px; }
 .toosuepha-hero > img { width: 100%; }
 .project-brand { text-align: center; padding-bottom: 10px; }
 .project-brand img { width: 105px; margin-inline: auto; }
@@ -56,13 +56,13 @@
 .ux-title { margin-top: 76px; text-align: center; font-size: 24px; letter-spacing: -1px; }
 .ux-feature { display: grid; grid-template-columns: 66.35% 1fr; gap: 3%; margin-top: 20px; }
 .ux-feature > img { width: 100%; }
-.ux-annotations { padding-top: 100px; }
+.ux-annotations { padding-top: 174px; }
 .annotation { position: relative; }
 .annotation h4 { margin: 0 0 8px; font-size: 24px; letter-spacing: 1px; font-weight: 500; color: #000; }
 .annotation p { font-size: 16px; line-height: 1.5; color: #000; }
 .annotation::before { content: ''; position: absolute; right: calc(100% + 10px); top: 26px; width: 165%; border-top: 3px solid #000; }
 .annotation::after { content: ''; position: absolute; right: calc(265% + 10px); top: 20px; width: 16px; height: 16px; border-radius: 50%; background: #000; }
-.annotation.try-on { margin-top: 100px; }
+.annotation.try-on { margin-top: 98px; }
 .annotation.try-on::before { width: 110%; }
 .annotation.try-on::after { right: calc(210% + 10px); }
 .product-flows { display: grid; grid-template-columns: 1fr 1fr; gap: 106px; margin-top: 7px; }
