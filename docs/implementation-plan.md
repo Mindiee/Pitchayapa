@@ -16,7 +16,7 @@ Astro builds three static routes, with shared Layout, Header, SectionNav, and pr
 
 - [x] Extract supplied artwork, create shared layout, and build Home. Test its two project routes and resume link, then commit and push.
 - [x] Build both case studies, responsive layouts, sticky section anchors and scroll tracking. Test direct routes, section navigation, external links, and image loading, then commit and push.
-- [ ] Check production build and types, desktop/tablet/mobile layouts, reduced-motion and keyboard navigation. Review all source, fix findings, commit and push. Deploy Vercel project pitchayapa and verify production routes.
+- [x] Check production build and types, desktop/tablet/mobile layouts, reduced-motion and keyboard navigation. Review all source, fix findings, commit and push. Deploy Vercel project pitchayapa and verify production routes.
 
 ## Verification
 

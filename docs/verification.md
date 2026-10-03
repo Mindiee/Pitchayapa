@@ -23,4 +23,12 @@ The installed Astro dependency tree reports the unpatched `http-cache-semantics`
 
 ## Deployment
 
-Vercel project `pitchayapa`, linked to `Mindiee/Pitchayapa`. Production verification is recorded after deployment below.
+Vercel project `pitchayapa`, linked to `Mindiee/Pitchayapa`.
+
+- Production: https://pitchayapa.vercel.app
+- Verified application commit: `55a2137`.
+- Deployment: `dpl_GzXUkoPUduAzFYeovnaGLevGo3hL`, status READY.
+- All 17 browser tests passed against the public production URL.
+- Direct production requests to `/`, `/toosuepha/`, and `/wua-lai/` returned HTTP 200.
+- The source history is on `codex/portfolio`, which is the GitHub repository's default branch. Vercel's Git production branch remains `main`; this release was explicitly published with the CLI. Further CLI releases are documented in README.
+- `.vercelignore` excludes original design exports, generated screenshots, test output, local build output, and environment files from future uploads.
