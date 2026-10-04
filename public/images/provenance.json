@@ -220,85 +220,6 @@
     "scale": 2
   },
   {
-    "file": "virtual-try-on.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 50,
-      "y": 3110,
-      "width": 783,
-      "height": 565
-    },
-    "scale": 2,
-    "sourceImage": "image18_211_6324",
-    "note": "Original embedded artwork; callout lines are responsive HTML/CSS."
-  },
-  {
-    "file": "rental-flow.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 50,
-      "y": 3874,
-      "width": 548,
-      "height": 396
-    },
-    "scale": 2
-  },
-  {
-    "file": "rental-notification.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 50,
-      "y": 4270,
-      "width": 548,
-      "height": 396
-    },
-    "scale": 2
-  },
-  {
-    "file": "lender-overview.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 704,
-      "y": 3874,
-      "width": 548,
-      "height": 396
-    },
-    "scale": 2
-  },
-  {
-    "file": "lender-returns.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 704,
-      "y": 4270,
-      "width": 548,
-      "height": 396
-    },
-    "scale": 2
-  },
-  {
-    "file": "journey.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 373,
-      "y": 4908,
-      "width": 599,
-      "height": 728
-    },
-    "scale": 2
-  },
-  {
-    "file": "prototype.webp",
-    "source": "Closet (2).zip/7.svg",
-    "crop": {
-      "x": 50,
-      "y": 5878,
-      "width": 1071,
-      "height": 1594
-    },
-    "scale": 2
-  },
-  {
     "file": "wua-lai-collage.webp",
     "source": "SVG revision 2/9.svg",
     "crop": {
@@ -495,5 +416,101 @@
       "height": 17
     },
     "scale": 2
+  },
+  {
+    "file": "reflection-screen.webp",
+    "source": "SVG revision 2/7.svg",
+    "crop": {
+      "x": 89,
+      "y": 8117,
+      "width": 25,
+      "height": 25
+    },
+    "scale": 2
+  },
+  {
+    "file": "reflection-people.webp",
+    "source": "SVG revision 2/7.svg",
+    "crop": {
+      "x": 492,
+      "y": 8117,
+      "width": 25,
+      "height": 25
+    },
+    "scale": 2
+  },
+  {
+    "file": "reflection-operations.webp",
+    "source": "SVG revision 2/7.svg",
+    "crop": {
+      "x": 895,
+      "y": 8117,
+      "width": 25,
+      "height": 25
+    },
+    "scale": 2
+  },
+  {
+    "file": "virtual-try-on.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern27_211_6324",
+    "width": 813.383,
+    "height": 454.485,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
+  },
+  {
+    "file": "rental-flow.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern28_211_6324",
+    "width": 584,
+    "height": 327,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
+  },
+  {
+    "file": "rental-notification.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern29_211_6324",
+    "width": 584,
+    "height": 327,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
+  },
+  {
+    "file": "lender-overview.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern30_211_6324",
+    "width": 584,
+    "height": 327,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
+  },
+  {
+    "file": "lender-returns.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern31_211_6324",
+    "width": 597,
+    "height": 355,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
+  },
+  {
+    "file": "journey.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern32_211_6324",
+    "width": 599,
+    "height": 727,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
+  },
+  {
+    "file": "prototype.webp",
+    "source": "SVG revision 2/7.svg",
+    "pattern": "pattern33_211_6324",
+    "width": 1070,
+    "height": 1592,
+    "scale": 2,
+    "note": "Isolated original image fill, without page text or callout overlays."
   }
 ]

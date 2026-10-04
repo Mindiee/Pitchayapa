@@ -5,11 +5,35 @@ test('home exposes both case studies and the supplied resume destination', async
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Pitchayapa');
   await expect(page.getByRole('link', { name: /download/i })).toHaveAttribute('href', 'https://drive.google.com/drive/folders/1BMrL3Ybh64YG5yk2HW2jAA_dVZJmQnUp?usp=sharing');
-  await page.getByRole('link', { name: /TooSuePha rental marketplace/i }).click();
+  await page.getByRole('link', { name: /TooSueaPha rental marketplace/i }).click();
   await expect(page).toHaveURL(/\/toosuepha\/$/);
   await page.getByRole('link', { name: 'Pitchayapa T.' }).click();
   await page.getByRole('link', { name: /The Echoes of Wua-lai interactive/i }).click();
   await expect(page).toHaveURL(/\/wua-lai\/$/);
+});
+
+for (const width of [320, 390, 768, 1280, 1920]) {
+  test(`home content and project grid are centered at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/');
+    const geometry = await page.evaluate(() => {
+      const main = document.querySelector('main')!.getBoundingClientRect();
+      const grid = document.querySelector('.project-grid')!.getBoundingClientRect();
+      return { mainOffset: Math.abs((main.left + main.right) / 2 - innerWidth / 2), gridOffset: Math.abs((grid.left + grid.right) / 2 - innerWidth / 2), overflows: document.documentElement.scrollWidth > innerWidth };
+    });
+    expect(geometry.mainOffset).toBeLessThanOrEqual(1);
+    expect(geometry.gridOffset).toBeLessThanOrEqual(1);
+    expect(geometry.overflows).toBe(false);
+  });
+}
+
+test('TooSueaPha uses the revised reflection and consistent project spelling', async ({ page }) => {
+  await page.goto('/toosuepha/');
+  await expect(page).toHaveTitle('TooSueaPha — Pitchayapa Thiamtamanee');
+  await expect(page.locator('main')).not.toContainText('TooSuePha');
+  await expect(page.locator('.reflection-grid article')).toHaveCount(3);
+  await expect(page.locator('#reflection')).not.toContainText('From Marketplace to Rental Experience');
+  await expect(page.getByRole('heading', { name: 'Think beyond the screen', exact: true })).toBeVisible();
 });
 
 for (const width of [390, 768, 1280]) {

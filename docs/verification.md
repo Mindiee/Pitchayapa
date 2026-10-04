@@ -1,4 +1,6 @@
-# Verification — 2026-10-04
+# Initial release verification — 2026-10-04
+
+This records the initial release. See `revision-2-verification.md` for the revised SVG implementation, which replaces Wua Lai's formerly empty sections.
 
 - `npm run check`: no errors, warnings, or hints.
 - `npm test`: 17 tests passed against the generated static production build.

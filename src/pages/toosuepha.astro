@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import SectionNav from '../components/SectionNav.astro';
 import Artwork from '../components/Artwork.astro';
-import { tooSuePhaUrl } from '../data/links';
+import { tooSueaPhaUrl } from '../data/links';
 import '../styles/projects.css';
 const sections = [
   { id: 'overall', label: 'Overall' },
@@ -18,40 +18,41 @@ const steps = [
   { icon: 'fit', title: 'Fit', text: 'Check size compatibility.' },
   { icon: 'try-on', title: 'Try-on', text: 'Visualize the look before renting.' },
   { icon: 'rent', title: 'Rent', text: 'Book across multiple lenders.' },
-  { icon: 'receive', title: 'Receive', text: 'TooSuePha manages delivery and handover.' },
-  { icon: 'return', title: 'Return', text: 'TooSuePha handles return, inspection, and cleaning.' },
+  { icon: 'receive', title: 'Receive', text: 'TooSueaPha manages delivery and handover.' },
+  { icon: 'return', title: 'Return', text: 'TooSueaPha handles return, inspection, and cleaning.' },
 ];
 ---
-<Layout title="TooSuePha — Pitchayapa Thiamtamanee" description="TooSuePha is a rental marketplace for clothing across different occasions, connecting renters, lenders, and rental operations in one experience.">
+<Layout title="TooSueaPha — Pitchayapa Thiamtamanee" description="TooSueaPha is a rental marketplace for clothing across different occasions, connecting renters, lenders, and rental operations in one experience.">
   <SectionNav sections={sections} />
   <main id="main" class="case-study toosuepha">
     <section id="overall" class="overall case-section" aria-labelledby="project-title">
       <h1 id="project-title" class="project-title">TOOSUEAPHA PROJECTS</h1>
       <div class="toosuepha-hero">
         <div class="project-brand">
-          <Artwork name="toosuepha-logo" alt="TooSuePha logo" width={105} height={105} eager />
-          <p>TooSuePha</p>
+          <Artwork name="toosuepha-logo" alt="TooSueaPha logo" width={105} height={105} eager />
+          <p>TooSueaPha</p>
         </div>
-        <Artwork name="toosuepha-laptop" alt="TooSuePha clothing rental marketplace displayed on a laptop" width={563} height={316} eager />
+        <Artwork name="toosuepha-laptop" alt="TooSueaPha clothing rental marketplace displayed on a laptop" width={563} height={316} eager />
       </div>
-      <p class="project-description"><strong>TooSuePha</strong> is a rental marketplace for clothing across different occasions, connecting renters, lenders, and rental operations in one experience.</p>
+      <p class="project-description"><strong>TooSueaPha</strong> is a rental marketplace for clothing across different occasions, connecting renters, lenders, and rental operations in one experience.</p>
       <div class="marketplace-concept">
         <div class="rental-labels" aria-label="Rent and lend"><span lang="th">เช่า</span><span lang="th">ปล่อยเช่า</span></div>
         <div class="concept-copy"><p>Find what fits. Try it on.<br />Rent what you need.</p><p>List what you own.<br />Earn from what you don’t wear.</p></div>
       </div>
-      <div class="visit"><a class="button" href={tooSuePhaUrl} target="_blank" rel="noopener noreferrer">VISIT WEBSITE <span aria-hidden="true">⟶</span></a></div>
+      <div class="visit"><a class="button" href={tooSueaPhaUrl} target="_blank" rel="noopener noreferrer">VISIT WEBSITE <span aria-hidden="true">⟶</span></a></div>
     </section>
     <section id="how-it-works" class="how-it-works case-section" aria-labelledby="how-title">
       <h2 id="how-title" class="section-title">How it works</h2>
+      <p class="how-description">TooSueaPha acts as the central hub, handling the clothing journey from lender to renter and back.</p>
       <ol class="operations-flow" aria-label="Rental cycle">
         {[
-          ['renter-icon', 'Lender'], ['platform-icon', 'TooSuePha'], ['lender-icon', 'Renter'], ['platform-icon', 'TooSuePha'], ['renter-icon', 'Lender'],
+          ['renter-icon', 'Lender'], ['platform-icon', 'TooSueaPha'], ['lender-icon', 'Renter'], ['platform-icon', 'TooSueaPha'], ['renter-icon', 'Lender'],
         ].map(([icon, title]) => <li><Artwork name={icon} alt="" width={60} height={60} /><strong>{title}</strong></li>)}
       </ol>
       <p class="who">who</p>
       <div class="roles">
         <div><Artwork name="lender-icon" alt="" width={70} height={70} /><h3>Lender</h3><p>Lists &amp; provides clothing</p></div>
-        <div><Artwork name="toosuepha-logo" alt="" width={70} height={70} /><h3>TooSuePha</h3><p>Receives · Inspects · Cleans · Ships</p></div>
+        <div><Artwork name="toosuepha-logo" alt="" width={70} height={70} /><h3>TooSueaPha</h3><p>Receives · Inspects · Cleans · Ships</p></div>
         <div><Artwork name="renter-icon" alt="" width={70} height={70} /><h3>Renter</h3><p>Finds · Tries · Rents · Returns</p></div>
       </div>
     </section>
@@ -70,7 +71,7 @@ const steps = [
         </div>
         <div class="strategic-insight">
           <div><h3>STRATEGIC INSIGHT</h3><p>Turn the platform into a trusted middle layer that manages the rental journey end to end.</p></div>
-          <div class="hypothesis"><h3>CORE HYPOTHESIS</h3><p>TooSuePha acts as the operational layer connecting renters and lenders, managing rental, delivery, inspection, and return to reduce friction and build trust throughout the experience.</p></div>
+          <div class="hypothesis"><h3>CORE HYPOTHESIS</h3><p>TooSueaPha acts as the operational layer connecting renters and lenders, managing rental, delivery, inspection, and return to reduce friction and build trust throughout the experience.</p></div>
         </div>
       </div>
     </section>
@@ -81,31 +82,31 @@ const steps = [
       </ol>
       <h3 class="ux-title">UX KEY</h3>
       <div class="ux-feature">
-        <Artwork name="virtual-try-on" alt="Virtual Try-On interface with fit measurements and a 3D mannequin wearing selected clothing" width={783} height={565} />
+        <Artwork name="virtual-try-on" alt="Virtual Try-On laptop interface with fit measurements and a 3D mannequin wearing selected clothing" width={813.383} height={454.485} />
         <div class="ux-annotations">
           <div class="annotation fit-match"><h4>FIT MATCH</h4><p>Compares Body Measurements with Garment Measurements to assess size fit.</p></div>
           <div class="annotation try-on"><h4>3D TRY-ON</h4><p>Visualizes garment fit separately from Fit calculation.</p></div>
         </div>
       </div>
       <div class="product-flows">
-        <article><h3>RENTAL FLOW</h3><p>Makes rental status, pickup and return dates, and next actions instantly clear.</p><Artwork name="rental-flow" alt="My Rental screen showing rental status and return checklist" width={548} height={396} /><Artwork name="rental-notification" alt="Urgent rental action notification with the return deadline" width={548} height={396} /></article>
-        <article><h3>LENDER FLOW</h3><p>Connects lender operations from booking and fulfillment to return inspection and the next rental.</p><Artwork name="lender-overview" alt="Lender overview with consignment care and rental performance" width={548} height={396} /><Artwork name="lender-returns" alt="Lender rental management screen with returns selected" width={548} height={396} /></article>
+        <article><h3>RENTAL FLOW</h3><p>Makes rental status, pickup and return dates, and next actions instantly clear.</p><Artwork name="rental-flow" alt="My Rental screen showing rental status and return checklist" width={584} height={327} /><Artwork name="rental-notification" alt="Urgent rental action notification with the return deadline" width={584} height={327} /></article>
+        <article><h3>LENDER FLOW</h3><p>Connects lender operations from booking and fulfillment to return inspection and the next rental.</p><Artwork name="lender-overview" alt="Lender overview with consignment care and rental performance" width={584} height={327} /><Artwork name="lender-returns" alt="Lender rental management screen showing the active rental order" width={597} height={355} /></article>
       </div>
     </section>
     <section id="journey" class="journey case-section" aria-labelledby="journey-title">
       <h2 id="journey-title" class="section-title">Journey</h2>
-      <div class="journey-artwork"><div class="journey-headings"><h3>Lender Flow</h3><h3>TooSuePha</h3><h3>Renter Flow</h3></div><Artwork name="journey" alt="Journey diagram linking lender listing, platform inspection and delivery, renter booking, and the return cycle" width={599} height={728} /></div>
+      <div class="journey-artwork"><div class="journey-headings"><h3>Lender Flow</h3><h3>TooSueaPha</h3><h3>Renter Flow</h3></div><Artwork name="journey" alt="Journey diagram linking lender listing, platform inspection and delivery, renter booking, and the return cycle" width={599} height={727} /></div>
     </section>
     <section id="prototype" class="prototype case-section" aria-labelledby="prototype-title">
       <h2 id="prototype-title" class="section-title">Prototype</h2>
-      <Artwork name="prototype" alt="Prototype flow connecting Home, 3D Studio, search results, Virtual Try-On, product details, My Rental, and lender order management" width={1071} height={1594} />
+      <Artwork name="prototype" alt="Prototype flow connecting Home, 3D Studio, search results, Virtual Try-On, product details, My Rental, and lender order management" width={1070} height={1592} />
     </section>
     <section id="reflection" class="reflection case-section" aria-labelledby="reflection-title">
       <h2 id="reflection-title" class="section-title">Reflection</h2>
-      <div class="reflection-content"><h3>From Marketplace to Rental Experience</h3>
-        <div><h4>01 — Think Beyond the Screen</h4><p>Rental design requires understanding the real-world process beyond booking.</p></div>
-        <div><h4>02 — Design for Both Sides</h4><p>Renter and lender experiences must work together as one connected system.</p></div>
-        <div><h4>03 — Operations Shape UX</h4><p>Delivery, inspection, and cleaning directly shape the rental experience.</p></div>
+      <div class="reflection-grid">
+        <article><Artwork name="reflection-screen" alt="" width={25} height={25} /><span class="reflection-number" aria-hidden="true">01</span><h3>Think beyond the screen</h3><p>Rental design requires understanding the real-world process beyond booking.</p></article>
+        <article><Artwork name="reflection-people" alt="" width={25} height={25} /><span class="reflection-number" aria-hidden="true">02</span><h3>Design for both sides</h3><p>Renter and lender experiences must work together as one connected system.</p></article>
+        <article><Artwork name="reflection-operations" alt="" width={25} height={25} /><span class="reflection-number" aria-hidden="true">03</span><h3>Operations shape UX</h3><p>Delivery, inspection, and cleaning directly shape the rental experience.</p></article>
       </div>
     </section>
   </main>

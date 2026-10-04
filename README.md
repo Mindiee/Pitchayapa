@@ -1,6 +1,6 @@
 # Pitchayapa portfolio
 
-Responsive static portfolio built with Astro and Inter, using the supplied `Closet (2).zip` SVG exports as the visual source.
+Responsive static portfolio built with Astro and Inter, using the supplied `Closet (2).zip` and revised `6.svg`, `7.svg`, and `9.svg` exports as the visual source.
 
 ## Development
 
@@ -27,7 +27,7 @@ To test a deployed build: `TEST_BASE_URL=https://your-deployment.vercel.app npm 
 
 ## Structure
 
-- `src/pages/`: Home, TooSuePha, and Wua Lai.
+- `src/pages/`: Home, TooSueaPha, and Wua Lai.
 - `src/components/`: shared header, artwork, and section navigation.
 - `src/scripts/section-navigation.ts`: scroll and anchor state.
 - `src/styles/`: shared layout and project styles, including responsive breakpoints.
@@ -37,7 +37,7 @@ To test a deployed build: `TEST_BASE_URL=https://your-deployment.vercel.app npm 
 
 Body copy is HTML. The website never embeds a full-page design screenshot. Artwork files are already committed; the original exports are not needed to build or deploy. To regenerate artwork, place the supplied `6.svg`, `7.svg`, and `9.svg` in `.design-reference/`, then run `node scripts/extract-artwork.mjs`.
 
-The Wua Lai export contains only its overview. Per the owner's instruction, its remaining navigation links point to empty section anchors in the original blank area. Add content directly to those sections when supplied.
+The revised Wua Lai export supplies all five sections: Overall, Why Wua-lai, How it works, Design & Interaction, and Outcome. TooSueaPha includes revised UX KEY mockups and three Reflection cards. To regenerate revised assets after the original extraction, place the newer exports in `.design-reference/revision-2/` and run `node scripts/extract-revision-2.mjs`.
 
 ## Deployment
 

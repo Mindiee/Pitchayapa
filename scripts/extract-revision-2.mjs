@@ -21,6 +21,9 @@ const crops = [
   ['wua-markers', '9', 919, 2985, 16, 17],
   ['wua-active', '9', 919, 3062, 16, 17],
   ['wua-hover', '9', 919, 3159, 16, 17],
+  ['reflection-screen', '7', 89, 8117, 25, 25],
+  ['reflection-people', '7', 492, 8117, 25, 25],
+  ['reflection-operations', '7', 895, 8117, 25, 25],
 ];
 await mkdir('public/images', { recursive: true });
 const rendered = new Map();
@@ -30,8 +33,29 @@ for (const [name, source, x, y, width, height] of crops) {
     .webp({ quality: 95 }).toFile(`public/images/${name}.webp`);
 }
 const existing = JSON.parse(await readFile('public/images/provenance.json', 'utf8'));
-const names = new Set(crops.map(([name]) => `${name}.webp`));
+// Render only the image-filled rectangle and its pattern. This preserves the
+// exact supplied laptop/mockup framing while excluding overlaid callout lines.
+const imageSlots = [
+  ['virtual-try-on', 'pattern27_211_6324', 813.383, 454.485],
+  ['rental-flow', 'pattern28_211_6324', 584, 327],
+  ['rental-notification', 'pattern29_211_6324', 584, 327],
+  ['lender-overview', 'pattern30_211_6324', 584, 327],
+  ['lender-returns', 'pattern31_211_6324', 597, 355],
+  ['journey', 'pattern32_211_6324', 599, 727],
+  ['prototype', 'pattern33_211_6324', 1070, 1592],
+];
+const svg = await readFile(`${sourceDirectory}/7.svg`, 'utf8');
+for (const [name, patternId, width, height] of imageSlots) {
+  const pattern = svg.match(new RegExp(`<pattern\\b[^>]*id="${patternId}"[^>]*>[\\s\\S]*?</pattern>`))?.[0];
+  const imageId = pattern?.match(/xlink:href="#([^"]+)"/)?.[1];
+  const image = svg.match(new RegExp(`<image\\b[^>]*id="${imageId}"[^>]*>`))?.[0];
+  if (!pattern || !image) throw new Error(`Missing source artwork: ${name}`);
+  const isolated = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><defs>${pattern}${image}</defs><rect width="${width}" height="${height}" fill="url(#${patternId})"/></svg>`;
+  await sharp(Buffer.from(isolated), { density: 144 }).webp({ quality: 95 }).toFile(`public/images/${name}.webp`);
+}
+const names = new Set([...crops, ...imageSlots].map(([name]) => `${name}.webp`));
 await writeFile('public/images/provenance.json', JSON.stringify([
   ...existing.filter(item => !names.has(item.file)),
   ...crops.map(([name, source, x, y, width, height]) => ({ file: `${name}.webp`, source: `SVG revision 2/${source}.svg`, crop: { x, y, width, height }, scale: 2 })),
+  ...imageSlots.map(([name, pattern, width, height]) => ({ file: `${name}.webp`, source: 'SVG revision 2/7.svg', pattern, width, height, scale: 2, note: 'Isolated original image fill, without page text or callout overlays.' })),
 ], null, 2));
