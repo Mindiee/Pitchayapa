@@ -1,0 +1,84 @@
+.wua-lai { max-width: 1280px; }
+.wua-lai .wua-overview { min-height: 1194px; padding-top: 104px; padding-bottom: 120px; }
+.soundscape-hero { display: grid; grid-template-columns: minmax(0, 673fr) minmax(0, 327fr); align-items: center; gap: 96px; max-width: 1096px; margin-top: 94px; }
+.soundscape-hero img { width: 100%; }
+.wua-lai .wua-overview .project-description { max-width: none; color: #000; margin-top: 72px; font-size: 20px; line-height: 28px; }
+.wua-lai .wua-overview .visit { margin-top: 54px; }
+.wua-context { min-height: 411px; padding-top: 110px; padding-bottom: 96px; }
+.wua-context > p { margin-top: 60px; font-size: 20px; font-weight: 350; line-height: 28px; color: #181818; }
+.wua-how { min-height: 921px; padding-top: 110px; padding-bottom: 105px; }
+.sound-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 0; list-style: none; margin: 82px 0 0; gap: 16px; color: #142038; }
+.sound-steps li { position: relative; text-align: center; isolation: isolate; }
+.sound-steps li:not(:last-child)::after { content: ''; position: absolute; top: 25px; left: 50%; width: calc(100% + 16px); border-top: 1px solid #dce4f1; z-index: -1; }
+.sound-steps img { width: 50px; height: 50px; background: #fff; margin-inline: auto; }
+.sound-steps h3, .sound-steps h4 { font-size: 13px; font-weight: 500; margin: 25px 0 7px; line-height: 1.3; }
+.sound-steps p { font-size: 11px; line-height: 1.5; color: #53637d; }
+.sound-steps .sound-accent h3, .sound-steps .sound-accent h4 { color: #ed8000; }
+.sound-data { display: flex; justify-content: space-between; align-items: flex-start; gap: 28px; margin: 49px 12px 0; }
+.sound-data img { width: 312px; max-width: 28%; height: auto; object-fit: contain; }
+.sound-data img:nth-child(2) { width: 284px; }
+.sound-data img:nth-child(3) { width: 313px; }
+.interaction-title { margin-top: 72px; font-size: 24px; line-height: 1.25; font-weight: 400; text-align: center; letter-spacing: -1.1px; }
+.interaction-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 30px; }
+.interaction-steps h4 { margin-top: 15px; }
+.wua-design { min-height: 723px; padding-top: 110px; padding-bottom: 95px; }
+.sound-design-layout { display: grid; grid-template-columns: minmax(0, 749px) minmax(0, 236px); align-items: center; gap: 35px; max-width: 1040px; margin: 66px auto 0; }
+.sound-design-layout > img { width: 100%; }
+.sound-design-details { display: grid; gap: 11px; }
+.sound-design-details article { border: 1px solid #dce4f1; border-radius: 12px; padding: 16px; color: #142038; }
+.sound-design-details h3 { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 500; line-height: 1.5; }
+.sound-design-details h3 img { width: 16px; height: 17px; flex: 0 0 auto; }
+.sound-design-details p { font-size: 10px; line-height: 1.7; color: #53637d; }
+.wua-outcome { min-height: 583px; padding-top: 110px; padding-bottom: 190px; }
+.wua-outcome > p { margin-top: 68px; font-size: 24px; line-height: 36px; letter-spacing: -.8px; color: #4b4e4f; }
+.wua-outcome blockquote { margin: 36px 0 0 36px; font-size: 24px; line-height: 36px; font-weight: 500; letter-spacing: -.8px; color: #aaa; }
+@media (max-width: 1000px) {
+  .soundscape-hero { gap: 48px; }
+  .sound-steps { gap: 12px; }
+  .sound-steps li:not(:last-child)::after { width: calc(100% + 12px); }
+  .sound-design-layout { gap: 25px; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr); }
+  .sound-design-details article { padding: 12px; }
+}
+@media (max-width: 900px) {
+  .wua-lai .wua-overview { min-height: 0; padding-block: 65px 85px; }
+  .soundscape-hero { margin-top: 55px; }
+  .wua-lai .wua-overview .project-description { margin-top: 50px; font-size: 18px; line-height: 1.5; }
+  .wua-lai .wua-overview .visit { margin-top: 42px; }
+  .wua-context, .wua-how, .wua-design, .wua-outcome { min-height: 0; padding-block: 65px; }
+  .wua-context > p { margin-top: 40px; font-size: 18px; line-height: 1.6; }
+  .sound-steps { margin-top: 50px; }
+  .sound-steps h3, .sound-steps h4 { font-size: 12px; }
+  .sound-steps p { font-size: 11px; }
+  .sound-data { gap: 18px; margin-inline: 0; }
+  .sound-data img { max-width: 31%; }
+  .sound-design-layout { grid-template-columns: 1fr; max-width: 749px; margin-top: 45px; }
+  .sound-design-details { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .sound-design-details article { padding: 18px; }
+  .sound-design-details h3 { font-size: 13px; }
+  .sound-design-details p { font-size: 12px; }
+  .wua-outcome > p { margin-top: 40px; font-size: 21px; line-height: 1.6; }
+  .wua-outcome blockquote { margin-left: 24px; font-size: 21px; line-height: 1.6; }
+}
+@media (max-width: 600px) {
+  .wua-lai .wua-overview { padding-block: 45px 60px; }
+  .soundscape-hero { grid-template-columns: 1fr; justify-items: center; gap: 30px; margin-top: 50px; }
+  .soundscape-hero img:last-child { width: min(68%, 260px); }
+  .wua-lai .wua-overview .project-description { margin-top: 35px; font-size: 17px; }
+  .wua-context, .wua-how, .wua-design, .wua-outcome { padding-block: 50px; }
+  .wua-context > p { font-size: 17px; margin-top: 30px; }
+  .sound-steps { grid-template-columns: 1fr; gap: 30px; max-width: 320px; margin-inline: auto; }
+  .sound-steps li { display: grid; grid-template-columns: 50px 1fr; column-gap: 18px; align-items: center; text-align: left; }
+  .sound-steps img { grid-row: span 2; }
+  .sound-steps h3, .sound-steps h4 { font-size: 14px; margin: 0 0 5px; }
+  .sound-steps p { font-size: 12px; }
+  .sound-steps li:not(:last-child)::after { top: 25px; left: 25px; height: calc(100% + 30px); width: 0; border-top: 0; border-left: 1px solid #dce4f1; }
+  .sound-data { flex-direction: column; align-items: center; gap: 24px; margin-top: 45px; }
+  .sound-data img { max-width: 100%; }
+  .interaction-title { margin-top: 55px; }
+  .interaction-steps { margin-top: 30px; }
+  .sound-design-layout { margin-top: 35px; }
+  .sound-design-details { grid-template-columns: 1fr; }
+  .wua-outcome { padding-bottom: 110px; }
+  .wua-outcome > p, .wua-outcome blockquote { font-size: 19px; line-height: 1.6; }
+  .wua-outcome blockquote { margin-left: 12px; }
+}

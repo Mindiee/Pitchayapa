@@ -297,5 +297,203 @@
       "height": 1594
     },
     "scale": 2
+  },
+  {
+    "file": "wua-lai-collage.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 819,
+      "y": 441,
+      "width": 327,
+      "height": 516
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-lai-design.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 120,
+      "y": 2851,
+      "width": 749,
+      "height": 418
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-activity-data.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 133,
+      "y": 1946,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-activity-density.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 372,
+      "y": 1946,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-category-weight.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 611,
+      "y": 1946,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-sound-intensity.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 850,
+      "y": 1946,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-generative-sound.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 1089,
+      "y": 1946,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-activity-legend.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 62,
+      "y": 2108,
+      "width": 312,
+      "height": 190
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-category-table.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 498,
+      "y": 2108,
+      "width": 284,
+      "height": 190
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-intensity-table.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 887,
+      "y": 2108,
+      "width": 313,
+      "height": 190
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-explore-map.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 164,
+      "y": 2430,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-discover-activity.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 465,
+      "y": 2430,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-select-place.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 766,
+      "y": 2430,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-listen-deeply.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 1068,
+      "y": 2430,
+      "width": 50,
+      "height": 50
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-audio.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 919,
+      "y": 2910,
+      "width": 16,
+      "height": 17
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-markers.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 919,
+      "y": 2985,
+      "width": 16,
+      "height": 17
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-active.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 919,
+      "y": 3062,
+      "width": 16,
+      "height": 17
+    },
+    "scale": 2
+  },
+  {
+    "file": "wua-hover.webp",
+    "source": "SVG revision 2/9.svg",
+    "crop": {
+      "x": 919,
+      "y": 3159,
+      "width": 16,
+      "height": 17
+    },
+    "scale": 2
   }
 ]

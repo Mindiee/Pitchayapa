@@ -4,25 +4,82 @@ import SectionNav from '../components/SectionNav.astro';
 import Artwork from '../components/Artwork.astro';
 import { wuaLaiUrl } from '../data/links';
 import '../styles/projects.css';
+import '../styles/wua-lai.css';
 const sections = [
   { id: 'overall', label: 'Overall' },
   { id: 'why-wua-lai', label: 'Why Wua-lai' },
   { id: 'how-it-works', label: 'How it works' },
   { id: 'design-interaction', label: 'Design & Interaction' },
-  { id: 'reflection', label: 'Reflection' },
+  { id: 'outcome', label: 'Outcome' },
+];
+const soundSteps = [
+  { icon: 'activity-data', title: '01 · Activity Data', detail: 'Place, category, day & time' },
+  { icon: 'activity-density', title: '02 · Activity Density', detail: 'How active the neighborhood is' },
+  { icon: 'category-weight', title: '03 · Category Weight', detail: 'Different influence by activity type' },
+  { icon: 'sound-intensity', title: '04 · Sound Intensity', detail: 'Density × category influence' },
+  { icon: 'generative-sound', title: '05 · Generative Sound', detail: 'Data Transformed Into Evolving Sound' },
+];
+const interactionSteps = [
+  { icon: 'explore-map', title: 'Explore Map', detail: 'Pan Wua-lai corridor' },
+  { icon: 'discover-activity', title: 'Discover Activity', detail: 'Follow glowing nodes' },
+  { icon: 'select-place', title: 'Select a Place', detail: 'Inspect artisan lineage' },
+  { icon: 'listen-deeply', title: 'Listen Deeply', detail: 'Solo binaural stems' },
+];
+const designDetails = [
+  { icon: 'audio', title: 'Audio', detail: 'Seamless granular sound morphing.' },
+  { icon: 'markers', title: 'Activity Markers', detail: 'Categorical color signatures.' },
+  { icon: 'active', title: 'Active State', detail: 'Subtle pulse & glow indicates actively sonifying.' },
+  { icon: 'hover', title: 'Hover Preview', detail: 'Instant telemetry, artisan lineage, and timbre ribbon.' },
 ];
 ---
-<Layout title="The Echoes of Wua-lai — Pitchayapa Thiamtamanee" description="The Echoes of Wua-lai is an interactive sound map that transforms everyday activity data in Wua-lai, Chiang Mai, into an evolving soundscape.">
+<Layout title="The Echoes of Wua-lai — Pitchayapa Thiamtamanee" description="An interactive sound map that transforms everyday activity density data in Wua-lai, Chiang Mai, into an evolving soundscape.">
   <SectionNav sections={sections} />
   <main id="main" class="case-study wua-lai">
-    <section id="overall" class="overall case-section" aria-labelledby="project-title">
+    <section id="overall" class="overall wua-overview case-section" aria-labelledby="project-title">
       <h1 id="project-title" class="project-title">THE ECHOES OF WUA-LAI<br />PROJECTS</h1>
-      <Artwork name="wua-lai-laptop" alt="The Echoes of Wua-lai interactive sound map displayed on a laptop" width={673} height={376} class="wua-lai-hero" eager />
-      <p class="project-description">The Echoes of Wua-lai is an interactive sound map that transforms everyday activity data in Wua-lai, Chiang Mai, into an evolving soundscape.</p>
+      <div class="soundscape-hero">
+        <Artwork name="wua-lai-laptop" alt="The Echoes of Wua-lai interactive sound map displayed on a laptop" width={673} height={376} eager />
+        <Artwork name="wua-lai-collage" alt="Wua-lai silver craftwork, craftspeople in their workshop, and neighborhood architecture" width={327} height={516} eager />
+      </div>
+      <p class="project-description">The Echoes of Wua-lai is an interactive sound map that transforms everyday activity density data in Wua-lai, Chiang Mai, into an evolving soundscape offering a new way to perceive and explore urban data through sound.</p>
       <div class="visit"><a class="button" href={wuaLaiUrl} target="_blank" rel="noopener noreferrer">VISIT WEBSITE <span aria-hidden="true">⟶</span></a></div>
     </section>
-    <!-- The supplied export is blank below the overview. At the user's
-         request, preserve the navigation and empty anchor destinations. -->
-    {sections.slice(1).map(({ id, label }) => <section id={id} class="empty-section" aria-label={label}></section>)}
+    <section id="why-wua-lai" class="wua-context case-section" aria-labelledby="context-title">
+      <h2 id="context-title" class="section-title">Context / Why Wua-lai</h2>
+      <p>Wua-lai is a historic neighborhood deeply rooted in silver craftsmanship. Traditional Tong Lai involves hammering, chiseling, and engraving patterns onto sheets of silver, creating a distinctive rhythm within the neighborhood.<br />Beyond craftsmanship, everyday activities also change throughout the day. This became the starting point for exploring how a neighborhood could be experienced through sound rather than visual data alone.</p>
+    </section>
+    <section id="how-it-works" class="wua-how case-section" aria-labelledby="sound-process-title">
+      <h2 id="sound-process-title" class="section-title">How it works</h2>
+      <ol class="sound-steps">
+        {soundSteps.map(({ icon, title, detail }, index) => <li class={index === 2 ? 'sound-accent' : ''}>
+          <Artwork name={`wua-${icon}`} alt="" width={50} height={50} /><h3>{title}</h3><p>{detail}</p>
+        </li>)}
+      </ol>
+      <div class="sound-data">
+        <Artwork name="wua-activity-legend" alt="Activity categories: Temple, Workshop, Museum, Market, and Crafthouse, with 2, 3, 2, 15, and 20 nodes respectively" width={312} height={190} />
+        <Artwork name="wua-category-table" alt="Category weights: Silver Shop 0.8, Crafthouse 1.0, Workshop 0.8, Temple 0.3, Market Night 1.2, Museum 0.2" width={284} height={190} />
+        <Artwork name="wua-intensity-table" alt="Day and time data: Monday 12:00 has 27 active activities and 20.4 sound intensity; Thursday 12:00, 26 and 19.4; Saturday 12:00, 25 and 18.4; Saturday 19:00, 9 and 6.8; Sunday 12:00, 20 and 14.2" width={313} height={190} />
+      </div>
+      <h3 class="interaction-title">User interaction flow</h3>
+      <ol class="sound-steps interaction-steps">
+        {interactionSteps.map(({ icon, title, detail }, index) => <li class={index === 2 ? 'sound-accent' : ''}>
+          <Artwork name={`wua-${icon}`} alt="" width={50} height={50} /><h4>{title}</h4><p>{detail}</p>
+        </li>)}
+      </ol>
+    </section>
+    <section id="design-interaction" class="wua-design case-section" aria-labelledby="interaction-title">
+      <h2 id="interaction-title" class="section-title">Design &amp; Interaction</h2>
+      <div class="sound-design-layout">
+        <Artwork name="wua-lai-design" alt="Interactive Wua-lai map with glowing activity markers, active activity legend, time and day controls, and audio controls" width={749} height={418} />
+        <div class="sound-design-details">
+          {designDetails.map(({ icon, title, detail }) => <article><h3><Artwork name={`wua-${icon}`} alt="" width={16} height={17} />{title}</h3><p>{detail}</p></article>)}
+        </div>
+      </div>
+    </section>
+    <section id="outcome" class="wua-outcome case-section" aria-labelledby="outcome-title">
+      <h2 id="outcome-title" class="section-title">Outcome</h2>
+      <p>The Echoes of Wua-lai turns neighborhood activity into something that can be explored, heard, and experienced, transforming data from a visual representation into an interactive soundscape.</p>
+      <blockquote>Every neighborhood has a rhythm.<br />Wua-lai simply taught us how to listen.</blockquote>
+    </section>
   </main>
 </Layout>

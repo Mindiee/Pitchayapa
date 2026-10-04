@@ -40,18 +40,20 @@ test('project website links use the supplied destinations', async ({ page }) => 
 });
 
 for (const width of [390, 768, 1280]) {
-  test(`Wua Lai keeps its empty section anchors at ${width}px`, async ({ page }) => {
+  test(`Wua Lai exposes its completed sections at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.goto('/wua-lai/');
     const nav = page.getByRole('navigation', { name: 'Project sections' });
-    for (const id of ['overall', 'why-wua-lai', 'how-it-works', 'design-interaction', 'reflection']) {
+    for (const id of ['overall', 'why-wua-lai', 'how-it-works', 'design-interaction', 'outcome']) {
       const link = nav.locator(`a[href="#${id}"]`);
       await link.click();
       await expect(link).toHaveAttribute('aria-current', 'location');
       await expect(page.locator(`#${id}`)).toBeAttached();
-      if (id !== 'overall') await expect(page.locator(`#${id}`)).toHaveText('');
+      await expect(page.locator(`#${id}`)).not.toHaveText('');
     }
+    await expect(page.getByRole('heading', { name: 'User interaction flow' })).toBeVisible();
+    await expect(page.locator('#outcome')).toContainText('Every neighborhood has a rhythm.');
   });
   test(`sticky anchors track click, scroll and direct hashes at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
