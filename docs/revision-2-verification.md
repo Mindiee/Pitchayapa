@@ -12,4 +12,9 @@
 - UX KEY and subsequent mockups use newly extracted source images. Callout lines remain HTML/CSS overlays so they can reflow on smaller screens.
 - Only desktop designs were supplied; responsive layouts reflow the same content and artwork.
 
-Production verification is recorded after deployment.
+## Production
+
+- Application commit `e2e2090` pushed to `Mindiee/Pitchayapa`, branch `codex/portfolio`.
+- Vercel deployment `dpl_9yBrF5UYWawn4dPx1cZsbkZptHVi` is READY and aliased to https://pitchayapa.vercel.app.
+- All 23 browser tests passed against the public production URL, including HTTP 200 on all three routes.
+- Independent read-only review found no actionable issues. Additional layouts at 320, 601, 901, 1101, and 1920 pixels showed no overflow; normal-motion Wua-lai navigation correctly updated the hash and active section.
