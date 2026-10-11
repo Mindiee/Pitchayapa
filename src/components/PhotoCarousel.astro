@@ -1,0 +1,39 @@
+---
+import Artwork from './Artwork.astro';
+const photos = [
+  ['wall', 'Silver relief panels on a Wua-lai building'],
+  ['temple', 'Silver temple architecture in Wua-lai'],
+  ['craft', 'Wua-lai craftspeople working in their workshop'],
+  ['market', 'Visitors and stalls at the Wua-lai night market'],
+  ['shop', 'A neighborhood shop in Wua-lai'],
+];
+---
+<wua-photo-carousel class="wua-photo-carousel" role="region" aria-roledescription="carousel" aria-label="Wua-lai neighborhood photos" tabindex="0">
+  <div class="wua-photo-window">
+    {photos.map(([name, alt], index) => <div class="wua-photo-slide" role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${photos.length}`} aria-current={index === 2 ? 'true' : undefined} aria-hidden={index !== 2 ? 'true' : undefined} style={`--offset:${index - 2};--scale:${index === 2 ? 1 : .878};opacity:${Math.abs(index - 2) > 1 ? 0 : 1}`}>
+      <Artwork name={`wua-photo-${name}`} alt={alt} width={327} height={245} eager />
+    </div>)}
+  </div>
+  <button class="wua-photo-toggle" type="button" aria-label="Pause slideshow">
+    <svg class="pause-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 3v8M10 3v8" stroke="currentColor" stroke-width="2" /></svg>
+    <svg class="play-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="m4 2 8 5-8 5z" fill="currentColor" /></svg>
+  </button>
+</wua-photo-carousel>
+
+<script>
+  import '../scripts/photo-carousel';
+</script>
+
+<style>
+  .wua-photo-carousel { display: block; position: relative; width: 100%; aspect-ratio: 327 / 516; touch-action: pan-x pinch-zoom; cursor: grab; }
+  .wua-photo-carousel:active { cursor: grabbing; }
+  .wua-photo-carousel:focus-visible { outline: 2px solid #6152f9; outline-offset: 6px; }
+  .wua-photo-window { position: absolute; inset: 0; overflow: clip; mask-image: linear-gradient(to bottom, transparent, #000 26%, #000 74%, transparent); }
+  .wua-photo-slide { position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--offset) * 106%)) scale(var(--scale)); transition: transform 650ms ease, opacity 650ms ease; }
+  .wua-photo-slide :global(img) { width: 100%; height: auto; filter: brightness(.7); pointer-events: none; user-select: none; }
+  .wua-photo-toggle { position: absolute; bottom: 0; right: 0; display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 1px solid #e6e6e6; border-radius: 50%; background: #fff; color: #747d90; cursor: pointer; }
+  .play-icon { display: none; }
+  [data-playing="false"] .pause-icon { display: none; }
+  [data-playing="false"] .play-icon { display: block; }
+  @media (prefers-reduced-motion: reduce) { .wua-photo-slide { transition: none; } }
+</style>

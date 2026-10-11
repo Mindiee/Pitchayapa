@@ -41,6 +41,8 @@ The revised Wua Lai export supplies all five sections: Overall, Why Wua-lai, How
 
 ## Deployment
 
+The Wua-lai photo carousel uses images extracted from the owner's `Group 138.svg` through `Group 141.svg`. Regenerate them with `node scripts/extract-carousel.mjs <directory-containing-the-SVGs>`. It advances every 4.5 seconds while visible, supports vertical swipes, mouse dragging, wheel scrolling, and arrow keys, and pauses after manual interaction. A pause/play control is available; reduced-motion users start with autoplay disabled.
+
 Vercel project: `pitchayapa`. `vercel.json` configures Astro's static output in `dist/`. No application secrets, database, server runtime, or environment variables are required.
 
 ```sh

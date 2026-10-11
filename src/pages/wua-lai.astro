@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import SectionNav from '../components/SectionNav.astro';
 import Artwork from '../components/Artwork.astro';
+import PhotoCarousel from '../components/PhotoCarousel.astro';
 import { wuaLaiUrl } from '../data/links';
 import '../styles/projects.css';
 import '../styles/wua-lai.css';
@@ -39,7 +40,7 @@ const designDetails = [
       <h1 id="project-title" class="project-title">THE ECHOES OF WUA-LAI<br />PROJECTS</h1>
       <div class="soundscape-hero">
         <Artwork name="wua-lai-laptop" alt="The Echoes of Wua-lai interactive sound map displayed on a laptop" width={673} height={376} eager />
-        <Artwork name="wua-lai-collage" alt="Wua-lai silver craftwork, craftspeople in their workshop, and neighborhood architecture" width={327} height={516} eager />
+        <PhotoCarousel />
       </div>
       <p class="project-description">The Echoes of Wua-lai is an interactive sound map that transforms everyday activity density data in Wua-lai, Chiang Mai, into an evolving soundscape offering a new way to perceive and explore urban data through sound.</p>
       <div class="visit"><a class="button" href={wuaLaiUrl} target="_blank" rel="noopener noreferrer">VISIT WEBSITE <span aria-hidden="true">⟶</span></a></div>

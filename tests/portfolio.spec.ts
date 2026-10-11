@@ -45,7 +45,7 @@ for (const width of [390, 768, 1280]) {
       const response = await page.goto(route);
       expect(response?.status()).toBe(200);
       await page.evaluate(async () => { await document.fonts.ready; });
-      for (const img of await page.locator('main img').all()) {
+      for (const img of await page.locator('main img:not(.wua-photo-slide img), .wua-photo-slide[aria-current="true"] img').all()) {
         await img.scrollIntoViewIfNeeded();
         await expect(img).toBeVisible();
         await expect.poll(() => img.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth > 0)).toBe(true);

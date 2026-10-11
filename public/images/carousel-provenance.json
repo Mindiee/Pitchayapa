@@ -1,0 +1,27 @@
+[
+  {
+    "file": "wua-photo-wall.webp",
+    "source": "Group 140.svg",
+    "pattern": "pattern1_241_1840"
+  },
+  {
+    "file": "wua-photo-temple.webp",
+    "source": "Group 139.svg",
+    "pattern": "pattern0_241_1839"
+  },
+  {
+    "file": "wua-photo-craft.webp",
+    "source": "Group 139.svg",
+    "pattern": "pattern1_241_1839"
+  },
+  {
+    "file": "wua-photo-market.webp",
+    "source": "Group 138.svg",
+    "pattern": "pattern0_241_1838"
+  },
+  {
+    "file": "wua-photo-shop.webp",
+    "source": "Group 141.svg",
+    "pattern": "pattern1_241_1841"
+  }
+]

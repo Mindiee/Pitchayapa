@@ -62,7 +62,7 @@
 @media (max-width: 600px) {
   .wua-lai .wua-overview { padding-block: 45px 60px; }
   .soundscape-hero { grid-template-columns: 1fr; justify-items: center; gap: 30px; margin-top: 50px; }
-  .soundscape-hero img:last-child { width: min(68%, 260px); }
+  .soundscape-hero > .wua-photo-carousel { width: min(68%, 260px); }
   .wua-lai .wua-overview .project-description { margin-top: 35px; font-size: 17px; }
   .wua-context, .wua-how, .wua-design, .wua-outcome { padding-block: 50px; }
   .wua-context > p { font-size: 17px; margin-top: 30px; }
